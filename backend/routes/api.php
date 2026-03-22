@@ -20,7 +20,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
 // Route::delete('/category/{id}', [CategoryController::class, 'destroy']);
 
 //  Faz tudo que as rotas acima faziam em apenas uma linha
-Route::apiResource('/category', [CategoryController::class]);
+Route::apiResource('/category', CategoryController::class);
 
 Route::middleware(['auth:sanctum', 'can:admin'])->group(function () {
     Route::apiResource('/users', UserController::class);
