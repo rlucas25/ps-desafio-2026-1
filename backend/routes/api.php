@@ -15,21 +15,17 @@ Route::middleware(['auth:sanctum'])->group(function () {
     });
 });
 
-// Route::get('/category', [CategoryController::class, 'index']);
-// Route::post('/category', [CategoryController::class, 'store']);
-// Route::get('/category/{id}', [CategoryController::class, 'show']);
-// Route::put('/category/{id}', [CategoryController::class, 'update']);
-// Route::delete('/category/{id}', [CategoryController::class, 'destroy']);
-
-// Faz tudo que as rotas acima faziam em apenas uma linha
-Route::apiResource('/category', CategoryController::class);
-
-
-Route::apiResource('/instruments', InstrumentsController::class);
-
 Route::middleware(['auth:sanctum', 'can:admin'])->group(function () {
     Route::apiResource('/users', UserController::class);
+    Route::apiResource('/category', CategoryController::class)->except(['index', 'show']);
+    Route::apiResource('/instruments', InstrumentsController::class)->except(['index', 'show']);
 });
+
+Route::get('/category', [CategoryController::class, 'index']);
+Route::get('/category/{id}', [CategoryController::class, 'show']);
+
+Route::get('/instruments', [InstrumentsController::class, 'index']);
+Route::get('/instruments/{id}', [InstrumentsController::class, 'show']);
 
 Route::get('/', function () {
     return ['Laravel' => app()->version()];
