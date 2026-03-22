@@ -22,7 +22,7 @@ class CategoryController extends Controller
      */
     public function index(): JsonResponse
     {
-        $categories = $this->category->all();
+        $categories = $this->category->with('instruments')->get();
         return response()->json($categories, Response::HTTP_OK);
     }
 
@@ -63,6 +63,6 @@ class CategoryController extends Controller
     {
         $category = $this->category->findOrFail($id);
         $category->delete();
-        return response()->json(['Message' => 'Categoria deletada!']);
+        return response()->json(['Message' => 'Categoria deletada com sucesso!']);
     }
 }

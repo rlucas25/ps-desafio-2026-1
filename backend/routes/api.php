@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\InstrumentsController;
 use App\Http\Controllers\UserController;
+use App\Models\Instruments;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -19,8 +21,11 @@ Route::middleware(['auth:sanctum'])->group(function () {
 // Route::put('/category/{id}', [CategoryController::class, 'update']);
 // Route::delete('/category/{id}', [CategoryController::class, 'destroy']);
 
-//  Faz tudo que as rotas acima faziam em apenas uma linha
+// Faz tudo que as rotas acima faziam em apenas uma linha
 Route::apiResource('/category', CategoryController::class);
+
+
+Route::apiResource('/instruments', InstrumentsController::class);
 
 Route::middleware(['auth:sanctum', 'can:admin'])->group(function () {
     Route::apiResource('/users', UserController::class);
