@@ -23,7 +23,7 @@ class StoreProductsRequest extends FormRequest
     {
         return [
             'name' => ['required', 'min:3', 'max:40'],
-            'brand' => ['required', 'min:3', 'max:40'],
+            'collection' => ['required', 'min:3', 'max:40'],
             'price' => ['required', 'decimal:2'],
             'year' => ['required', 'integer'],
             'image' => ['file'],

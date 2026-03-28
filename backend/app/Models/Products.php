@@ -8,14 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Throwable;
 
-class products extends Model
+class Products extends Model
 {
     /** @use HasFactory<\Database\Factories\productsFactory> */
     use HasFactory, HasUuids;
 
     protected $fillable = [
         'name',
-        'brand',
+        'collection',
         'price',
         'year',
         'image',

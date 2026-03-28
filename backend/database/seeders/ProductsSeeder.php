@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
+use App\Models\Products;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +14,53 @@ class productsSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $calcados = Category::where('name', 'Calcados')->first();
+        $shorts = Category::where('name', 'Shorts')->first();
+        $camisas = Category::where('name', 'Camisas')->first();
+        $bolas = Category::where('name', 'Bolas')->first();
+
+        $products = [
+            [
+                'name' => 'Tênis World Destroyer',
+                'collection' => 'Destroyer',
+                'price' => 399.90,
+                'year' => 2024,
+                'image' => null,
+                'amount' => 25,
+                'category_id' => $calcados->id,
+            ],
+            [
+                'name' => 'Camiseta World Destroyer',
+                'collection' => 'Destroyer',
+                'price' => 99.90,
+                'year' => 2024,
+                'image' => null,
+                'amount' => 25,
+                'category_id' => $camisas->id,
+            ],
+            [
+                'name' => 'Short World Destroyer',
+                'collection' => 'Destroyer',
+                'price' => 59.90,
+                'year' => 2024,
+                'image' => null,
+                'amount' => 25,
+                'category_id' => $shorts->id,
+            ],
+            [
+                'name' => 'Bola World Destroyer',
+                'collection' => 'Destroyer',
+                'price' => 59.90,
+                'year' => 2024,
+                'image' => null,
+                'amount' => 25,
+                'category_id' => $bolas->id,
+            ],
+            
+        ];
+
+        foreach ($products as $product) {
+            Products::create($product);
+        }
     }
 }
