@@ -91,4 +91,17 @@ class ProductsController extends Controller
         return response()->json(['Message' => 'produto deletado com sucesso!']);
     
     }
+
+    public function purchase($id): JsonResponse
+    {
+        $product = $this->product->findOrfail($id);
+
+        if ($product->amount <= 0){
+            return response()->json(['Message' => 'Sem estoque']);
+        }
+            
+        $product->amount --;
+        $product->save();
+        return response()->json(['Message' => 'Compra realizada']);
+    }
 }
