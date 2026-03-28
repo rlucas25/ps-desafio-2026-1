@@ -16,14 +16,14 @@ class Category extends Model
     ];
 
     public function products(){
-        return $this->hasMany(products::class, 'category_id', 'id');
+        return $this->hasMany(Products::class, 'category_id', 'id');
     }
 
     // Delete all products with category
     protected static function booted()
     {
         self::deleting(function (Category $category){
-            $category->products()->each(function (products $product){
+            $category->products()->each(function (Products $product){
                 $product->delete();
                 
             });
