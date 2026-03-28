@@ -15,16 +15,16 @@ class Category extends Model
         'name'
     ];
 
-    public function instruments(){
-        return $this->hasMany(Instruments::class, 'category_id', 'id');
+    public function products(){
+        return $this->hasMany(products::class, 'category_id', 'id');
     }
 
-    // Delete all instruments with category
+    // Delete all products with category
     protected static function booted()
     {
         self::deleting(function (Category $category){
-            $category->instruments()->each(function (Instruments $instrument){
-                $instrument->delete();
+            $category->products()->each(function (products $product){
+                $product->delete();
                 
             });
         });

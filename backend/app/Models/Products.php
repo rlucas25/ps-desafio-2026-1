@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Throwable;
 
-class Instruments extends Model
+class products extends Model
 {
-    /** @use HasFactory<\Database\Factories\InstrumentsFactory> */
+    /** @use HasFactory<\Database\Factories\productsFactory> */
     use HasFactory, HasUuids;
 
     protected $fillable = [
@@ -30,10 +30,10 @@ class Instruments extends Model
 
     protected static function booted()
     {
-        self::deleted(function (Instruments $instrument){
+        self::deleted(function (products $product){
             try {
-                $image_name = explode('instruments/', $instrument['image']);
-                Storage::disk('public')->delete('instruments/'.$image_name[1]);
+                $image_name = explode('products/', $product['image']);
+                Storage::disk('public')->delete('products/'.$image_name[1]);
             }catch (Throwable){}
         });
     }
