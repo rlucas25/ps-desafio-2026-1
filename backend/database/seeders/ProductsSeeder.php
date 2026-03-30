@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Products;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class productsSeeder extends Seeder
@@ -22,7 +21,7 @@ class productsSeeder extends Seeder
         $products = [
             [
                 'name' => 'Tênis World Destroyer',
-                'collection' => 'Destroyer',
+                'brand' => 'Destroyer',
                 'price' => 399.90,
                 'year' => 2024,
                 'image' => null,
@@ -31,7 +30,7 @@ class productsSeeder extends Seeder
             ],
             [
                 'name' => 'Camiseta World Destroyer',
-                'collection' => 'Destroyer',
+                'brand' => 'Destroyer',
                 'price' => 99.90,
                 'year' => 2024,
                 'image' => null,
@@ -40,7 +39,7 @@ class productsSeeder extends Seeder
             ],
             [
                 'name' => 'Short World Destroyer',
-                'collection' => 'Destroyer',
+                'brand' => 'Destroyer',
                 'price' => 59.90,
                 'year' => 2024,
                 'image' => null,
@@ -49,7 +48,7 @@ class productsSeeder extends Seeder
             ],
             [
                 'name' => 'Bola World Destroyer',
-                'collection' => 'Destroyer',
+                'brand' => 'Destroyer',
                 'price' => 59.90,
                 'year' => 2024,
                 'image' => null,

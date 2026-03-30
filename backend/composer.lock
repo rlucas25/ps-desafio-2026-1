@@ -1187,7 +1187,7 @@
                 "illuminate/broadcasting": "self.version",
                 "illuminate/bus": "self.version",
                 "illuminate/cache": "self.version",
-                "illuminate/collections": "self.version",
+                "illuminate/brands": "self.version",
                 "illuminate/concurrency": "self.version",
                 "illuminate/conditionable": "self.version",
                 "illuminate/config": "self.version",
@@ -1289,8 +1289,8 @@
             },
             "autoload": {
                 "files": [
-                    "src/Illuminate/Collections/functions.php",
-                    "src/Illuminate/Collections/helpers.php",
+                    "src/Illuminate/brands/functions.php",
+                    "src/Illuminate/brands/helpers.php",
                     "src/Illuminate/Events/functions.php",
                     "src/Illuminate/Filesystem/functions.php",
                     "src/Illuminate/Foundation/helpers.php",
@@ -1302,7 +1302,7 @@
                     "Illuminate\\": "src/Illuminate/",
                     "Illuminate\\Support\\": [
                         "src/Illuminate/Macroable/",
-                        "src/Illuminate/Collections/",
+                        "src/Illuminate/brands/",
                         "src/Illuminate/Conditionable/"
                     ]
                 }
@@ -1354,7 +1354,7 @@
                 "laravel/framework": ">=10.17.0 <10.25.0"
             },
             "require-dev": {
-                "illuminate/collections": "^10.0|^11.0|^12.0|^13.0",
+                "illuminate/brands": "^10.0|^11.0|^12.0|^13.0",
                 "mockery/mockery": "^1.5",
                 "pestphp/pest": "^2.3|^3.4|^4.0",
                 "phpstan/phpstan": "^1.12.28",
@@ -3259,16 +3259,16 @@
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
-            "name": "ramsey/collection",
+            "name": "ramsey/brand",
             "version": "2.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ramsey/collection.git",
+                "url": "https://github.com/ramsey/brand.git",
                 "reference": "344572933ad0181accbf4ba763e85a0306a8c5e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/collection/zipball/344572933ad0181accbf4ba763e85a0306a8c5e2",
+                "url": "https://api.github.com/repos/ramsey/brand/zipball/344572933ad0181accbf4ba763e85a0306a8c5e2",
                 "reference": "344572933ad0181accbf4ba763e85a0306a8c5e2",
                 "shasum": ""
             },
@@ -3305,7 +3305,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Ramsey\\Collection\\": "src/"
+                    "Ramsey\\brand\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3319,18 +3319,18 @@
                     "homepage": "https://benramsey.com"
                 }
             ],
-            "description": "A PHP library for representing and manipulating collections.",
+            "description": "A PHP library for representing and manipulating brands.",
             "keywords": [
                 "array",
-                "collection",
+                "brand",
                 "hash",
                 "map",
                 "queue",
                 "set"
             ],
             "support": {
-                "issues": "https://github.com/ramsey/collection/issues",
-                "source": "https://github.com/ramsey/collection/tree/2.1.1"
+                "issues": "https://github.com/ramsey/brand/issues",
+                "source": "https://github.com/ramsey/brand/tree/2.1.1"
             },
             "time": "2025-03-22T05:38:12+00:00"
         },
@@ -3351,7 +3351,7 @@
             "require": {
                 "brick/math": "^0.8.16 || ^0.9 || ^0.10 || ^0.11 || ^0.12 || ^0.13 || ^0.14",
                 "php": "^8.0",
-                "ramsey/collection": "^1.2 || ^2.0"
+                "ramsey/brand": "^1.2 || ^2.0"
             },
             "replace": {
                 "rhumsaa/uuid": "self.version"
@@ -6718,11 +6718,11 @@
                 "php": "^7.1 || ^8.0"
             },
             "conflict": {
-                "doctrine/collections": "<1.6.8",
+                "doctrine/brands": "<1.6.8",
                 "doctrine/common": "<2.13.3 || >=3 <3.2.2"
             },
             "require-dev": {
-                "doctrine/collections": "^1.6.8",
+                "doctrine/brands": "^1.6.8",
                 "doctrine/common": "^2.13.3 || ^3.2.2",
                 "phpspec/prophecy": "^1.10",
                 "phpunit/phpunit": "^7.5.20 || ^8.5.23 || ^9.5.13"
@@ -7580,7 +7580,7 @@
                     "role": "lead"
                 }
             ],
-            "description": "Library that provides collection, processing, and rendering functionality for PHP code coverage information.",
+            "description": "Library that provides brand, processing, and rendering functionality for PHP code coverage information.",
             "homepage": "https://github.com/sebastianbergmann/php-code-coverage",
             "keywords": [
                 "coverage",
@@ -8051,7 +8051,7 @@
                     "role": "lead"
                 }
             ],
-            "description": "Collection of value objects that represent the PHP code units",
+            "description": "brand of value objects that represent the PHP code units",
             "homepage": "https://github.com/sebastianbergmann/code-unit",
             "support": {
                 "issues": "https://github.com/sebastianbergmann/code-unit/issues",
@@ -8838,7 +8838,7 @@
                     "role": "lead"
                 }
             ],
-            "description": "Collection of value objects that represent the types of the PHP type system",
+            "description": "brand of value objects that represent the types of the PHP type system",
             "homepage": "https://github.com/sebastianbergmann/type",
             "support": {
                 "issues": "https://github.com/sebastianbergmann/type/issues",
