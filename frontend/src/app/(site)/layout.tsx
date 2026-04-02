@@ -1,22 +1,58 @@
 import Header from './_components/Header.tsx'
 import CurvedSection from './_components/CurvedSection.tsx'
+import ShoeVideo from './_components/ShoeVideo.tsx';
+import SloganText from './_components/SloganText.tsx';
+import Button1 from './_components/Button1.tsx';
+
 import Home from './page.jsx'
 
 export default function SiteLayout() {
-    // Variáveis para facilitar o ajuste do triângulo
-    const triangleSize = 300;
 
     return (
         <div>
             <Header />
-            <div id='home' style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                height: '70vh',
-                width: '40%',
-                background: 'linear-gradient(0deg, hsl(145 64% 11%), hsl(0, 0%, 0%))',
-            }}>
+
+            <div id='home'
+                style={{
+                    width: '35%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'flex-start',
+                    padding: '40px',
+                    paddingTop: '190px',
+                    height: '70vh',
+                    background: 'linear-gradient(0deg, hsl(145 64% 11%), black)'
+                }}>
+
+
+                <ShoeVideo />
+
+                <div className='content'
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '70px',
+                    }}>
+
+                    <SloganText />
+
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: '30px'
+                        }}
+
+                    >
+
+                        <Button1 text='Explorar Mais Vendidos' id='#collections' />
+                        <Button1 text='ir para a Loja' id='#store' />
+
+                    </div>
+
+                </div>
+
             </div>
 
 
@@ -28,13 +64,14 @@ export default function SiteLayout() {
                 background: '',
             }}>
                 <CurvedSection
-                    //color="hsl(145 64% 11%)"
-                    width="5.7vw"
-                    height="6.7vh"
+                    //color="hsl(145 64% 100%)"
+                    color="hsl(145 64% 11%)"
+                    width="6dvw"
+                    height="7.4vh"
                     style={{
                         position: "absolute",
-                        top: "-6vh",
-                        left: "38vw"
+                        top: "-7vh",
+                        left: "34.0vw"
                     }}
 
                 />
@@ -59,7 +96,7 @@ export default function SiteLayout() {
                 alignItems: 'center',
                 height: '100vh',
                 width: '30%',
-                background: 'linear-gradient(90deg, black, rgb(43, 43, 43)',
+                background: 'green',
             }}>
             </div>
 
@@ -78,7 +115,7 @@ export default function SiteLayout() {
                 alignItems: 'center',
                 height: '100vh',
                 width: '30%',
-                backgroundColor: 'red',
+                backgroundColor: 'green',
             }}>
             </div>
         </div >

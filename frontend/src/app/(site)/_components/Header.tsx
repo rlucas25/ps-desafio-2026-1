@@ -1,11 +1,12 @@
 "use client"
-import "./style.css"
+import "./styleHeader.css"
 import { useState, useEffect, useRef } from "react"
 
 export default function Header() {
 
     const alpha = 0.5
 
+    // Links para cada secao
     const links = [
         { name: "Home", id: "home" },
         { name: "Collections", id: "collections" },
@@ -96,7 +97,7 @@ export default function Header() {
                     display: 'flex',
                     alignItems: "center",
                     height: '4dvh',
-                    width: 'clamp(250px, 40vw, 900px)',
+                    width: 'clamp(250px, 30vw, 600px)',
                     backgroundColor: `hsl(var(--secondary) / ${alpha})`,
                     borderRadius: '60px',
                     padding: '0 1.5vw',
@@ -106,7 +107,7 @@ export default function Header() {
 
                 <div style={{
                     display: 'flex',
-                    gap: '2.5vw',
+                    gap: '1vw',
                     position: 'relative',
                     zIndex: 2,
                     width: '100%',

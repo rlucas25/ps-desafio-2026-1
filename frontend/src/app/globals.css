@@ -1,5 +1,5 @@
 :root {
-    --background-gradient: linear-gradient(145deg, black, rgb(43, 43, 43));
+    --background-gradient: linear-gradient(145deg, black, black, rgb(43, 43, 43));
 
     --foreground: 218 26% 48%;
     --muted: 205 33% 87%;
