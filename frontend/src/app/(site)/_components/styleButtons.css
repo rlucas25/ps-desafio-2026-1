@@ -44,3 +44,31 @@ a.btn-link {
     background: rgba(0, 0, 0, 0.6);
     transform: scale(1.05);
 }
+
+.btn2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 25vw;
+
+    background: hsl(152 100% 21%);
+    color: white;
+
+    padding: 30px 40px;
+    border-radius: 80px;
+    border: transparent;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn2 h3 {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.btn2:hover {
+    background: hsla(151, 100%, 50%, 0.7);
+    transform: scale(1.05);
+}

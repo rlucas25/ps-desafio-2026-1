@@ -1,0 +1,126 @@
+.collections {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 0 0 90px 0;
+    background: linear-gradient(180deg,
+            hsl(145 64% 11%),
+            hsl(145 64% 11%),
+            hsl(152 100% 21%));
+}
+
+/* fundo geral */
+.collections__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+/* base comum dos cards */
+.carousel-card {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
+    transition:
+        ttop 1.3s cubic-bezier(0.22, 1, 0.36, 1),
+        left 1.3s cubic-bezier(0.22, 1, 0.36, 1),
+        bottom 1.3s cubic-bezier(0.22, 1, 0.36, 1),
+        width 1.3s cubic-bezier(0.22, 1, 0.36, 1),
+        height 1.3s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 1.3s ease,
+        transform 1.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* slot topo esquerdo */
+.carousel-card--top {
+    top: 0%;
+    left: 7%;
+    width: 36%;
+    height: 29%;
+    z-index: 2;
+    opacity: 0.6;
+    transform: scale(0.96);
+}
+
+/* slot meio direito */
+.carousel-card--middle {
+    top: 20%;
+    left: 35%;
+    width: 58%;
+    height: 45%;
+    z-index: 3;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* slot inferior esquerdo */
+.carousel-card--bottom {
+    bottom: 15%;
+    left: 7%;
+    width: 36%;
+    height: 29%;
+    z-index: 2;
+    opacity: 0.6;
+    transform: scale(0.97);
+}
+
+.carousel-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+}
+
+.carousel-card--exit {
+    left: 7%;
+    bottom: -22%;
+    width: 36%;
+    height: 29%;
+    z-index: 1;
+    opacity: 0;
+    transform: scale(0.92);
+    pointer-events: none;
+}
+
+/* player */
+.carousel-player {
+    position: absolute;
+    left: 55%;
+    bottom: 30%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.carousel-player__bar {
+    width: 150px;
+    height: 18px;
+    background: hsl(0 0% 33%);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.carousel-player__fill {
+    height: 100%;
+    border-radius: 999px;
+    background: #10d86c;
+    transition: width 50ms linear;
+}
+
+.carousel-player__button {
+    width: 22px;
+    height: 22px;
+    border: none;
+    border-radius: 50%;
+    background: hsl(0 0% 33%);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+}
