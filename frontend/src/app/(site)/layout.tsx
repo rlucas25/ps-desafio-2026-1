@@ -270,8 +270,11 @@ export default function SiteLayout() {
                     alignItems: 'center',
                     height: '100vh',
                     width: '30%',
-                    background: 'green',
+                    background: '',
                 }}>
+
+
+
             </div>
 
             <div

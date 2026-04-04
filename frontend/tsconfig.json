@@ -34,7 +34,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/(site)/_components/ScrollSelector.tsx",
-    "src/app/(site)/_components/ScrollSelector.tsx"
+    "src/app/(site)/_components/ScrollSelector.tsx",
+    "src/app/(site)/_components/Buttons.tsx"
   ],
   "exclude": [
     "node_modules"

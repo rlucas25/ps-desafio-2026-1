@@ -1,5 +1,5 @@
 "use client"
-import "./styleScrollSelector.css"
+import styles from "./scrollselector.module.css"
 import { useRef, useState } from "react";
 import Link from "next/link";
 import { useEffect } from "react";
@@ -44,12 +44,12 @@ export default function ScrollSelector() {
 
     return (
         <div style={{ width: "80%" }}>
-            <div className="container">
+            <div className={styles.container}>
 
                 <div
                     ref={scrollRef}
                     onScroll={handleScroll}
-                    className="scroll"
+                    className={styles.scroll}
                 >
                     {items.map((item, i) => (
                         <Link
@@ -57,8 +57,8 @@ export default function ScrollSelector() {
                             href={`/${item.toLowerCase()}`}
                             style={{ textDecoration: "none", color: "inherit" }}
                         >
-                            <div className="item">
-                                <div className="circle" />
+                            <div className={styles.item}>
+                                <div className={styles.circle} />
                                 <span>{item}</span>
                             </div>
                         </Link>
@@ -81,7 +81,7 @@ export default function ScrollSelector() {
                             el.scrollLeft = scrollTo;
                             setProgress(value);
                         }}
-                        className="range"
+                        className={styles.range}
                     />
                 )}
 

@@ -15,3 +15,14 @@
         transform: scale(1.2);
     }
 }
+
+.selector {
+    position: absolute;
+    height: clamp(20px, 3vh, 60px);
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border-radius: 60px;
+    transition: all 0.3s ease;
+    z-index: 1;
+}

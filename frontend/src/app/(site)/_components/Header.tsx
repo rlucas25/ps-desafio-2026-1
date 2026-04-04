@@ -1,5 +1,5 @@
 "use client"
-import "./styleHeader.css"
+import styles from "./header.module.css"
 import { useState, useEffect, useRef } from "react"
 
 export default function Header() {
@@ -12,7 +12,7 @@ export default function Header() {
         { name: "Coleções", id: "collections" },
         { name: "Loja", id: "store" },
         { name: "Sobre", id: "about" },
-        { name: "Contato", id: "contact" }
+        { name: "Contatos", id: "contact" }
     ]
 
     const [active, setActive] = useState("home")
@@ -118,7 +118,7 @@ export default function Header() {
 
                         <a
                             ref={(el) => linkRefs.current[index] = el}
-                            className="nav-link"
+                            className={styles["nav-link"]}
                             key={link.id}
                             href={`#${link.id}`}
                             onClick={() => {
@@ -146,17 +146,10 @@ export default function Header() {
                 </div>
 
                 <div
+                    className={styles.selector}
                     style={{
-                        position: 'absolute',
                         left: selectorStyle.left,
                         width: selectorStyle.width,
-                        height: 'clamp(20px, 3vh, 60px)',
-                        top: '50%',
-                        transform: 'translateY(-50%)',
-                        backgroundColor: 'white',
-                        borderRadius: '60px',
-                        transition: 'all 0.3s ease',
-                        zIndex: 1
                     }}
                 />
 

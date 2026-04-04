@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useMemo, useState } from "react"
-import "./styleCarousel.css"
+import styles from "./carousel.module.css"
 
 const IMAGES = [
   "assets/img/carousel/1.jpg",
@@ -84,33 +84,33 @@ export default function CollectionsCarousel() {
   }
 
   return (
-    <section className="collections">
-      <div className="collections__bg" />
+    <section className={styles.collections}>
+      <div className={styles.collections__bg} />
 
       {cards.map((card) => (
         <div
           key={card.key}
-          className={`carousel-card carousel-card--${card.slot}`}
+          className={`${styles["carousel-card"]} ${styles[`carousel-card--${card.slot}`]}`}
         >
           <img
             src={card.image}
             alt=""
-            className="carousel-card__image"
+            className={styles["carousel-card__image"]}
             draggable="false"
           />
         </div>
       ))}
 
-      <div className="carousel-player">
-        <div className="carousel-player__bar">
+      <div className={styles["carousel-player"]}>
+        <div className={styles["carousel-player__bar"]}>
           <div
-            className="carousel-player__fill"
+            className={styles["carousel-player__fill"]}
             style={{ width: `${progress}%` }}
           />
         </div>
 
         <button
-          className="carousel-player__button"
+          className={styles["carousel-player__button"]}
           onClick={goNext}
           aria-label="Próxima imagem"
         >
