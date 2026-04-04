@@ -3,6 +3,7 @@ import ShoeVideo from './_components/ShoeVideo';
 import SloganText from './_components/SloganText';
 import Button1, { Button2 } from './_components/Buttons';
 import CollectionsCarousel from './_components/Carousel';
+import ScrollSelector from './_components/ScrollSelector';
 
 export default function SiteLayout() {
 
@@ -194,7 +195,7 @@ export default function SiteLayout() {
                     style={{
                         display: 'flex',
                         position: 'absolute',
-                        top: '205.6%',
+                        top: '204%',
                         right: '70%',
                         height: '5vw',
                         width: '5vw',
@@ -224,8 +225,9 @@ export default function SiteLayout() {
                 id='scroll'
                 style={{
                     display: 'flex',
+                    flexDirection: 'column',
                     justifyContent: 'center',
-                    height: '50vw',
+                    height: '40vw',
                     width: '100vw',
                     background: 'black',
                     borderRadius: '100px',
@@ -234,6 +236,7 @@ export default function SiteLayout() {
                     style={{
                         display: 'flex',
                         alignItems: 'center',
+                        justifyContent: 'center',
                         fontSize: "clamp(30px, 4vw, 52px)",
                         fontWeight: 800,
                         color: 'white',
@@ -241,6 +244,20 @@ export default function SiteLayout() {
                     Para quem você está comprando?
                 </h1>
 
+
+                <div
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        height: '50%',
+                        width: '100%',
+                    }}
+
+                >
+                    <ScrollSelector />
+
+                </div>
 
             </div>
 

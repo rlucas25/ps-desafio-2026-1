@@ -32,7 +32,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/app/(site)/_components/ScrollSelector.tsx",
+    "src/app/(site)/_components/ScrollSelector.tsx"
   ],
   "exclude": [
     "node_modules"

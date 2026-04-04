@@ -1,0 +1,150 @@
+.container {
+    color: white;
+}
+
+/* SCROLL */
+
+.scroll {
+    display: flex;
+    gap: 40px;
+    overflow-x: scroll;
+    display: flex;
+    gap: 40px;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
+
+    /* remove scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* remove scrollbar em Chrome/Safari*/
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll:active {
+    cursor: grabbing;
+}
+
+
+.item {
+    min-width: 120px;
+}
+
+/* CÍRCULO */
+.circle {
+    width: clamp(80px, 10vw, 200px);
+    height: clamp(80px, 10vw, 200px);
+    border-radius: 50%;
+    background: #00ff88;
+}
+
+/* TEXTO */
+.item span {
+    margin-top: 15px;
+    font-size: clamp(20px, 1.5vw, 30px);
+    color: white;
+}
+
+.item {
+    padding: 10%;
+    display: flex;
+    width: clamp(80px, 11vw, 195px);
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item:hover .circle {
+    box-shadow: 0 0 40px #00ff886d;
+}
+
+
+
+.range {
+    width: 100%;
+    appearance: none;
+
+    height: 10px;
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0.5;
+    transition: transform 0.25s ease;
+}
+
+.range:hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.range:hover {
+    opacity: 1;
+    height: 24px;
+}
+
+/* Slider minibar */
+.range::-webkit-slider-thumb {
+    appearance: none;
+
+    width: clamp(50px, 20vw, 1000px);
+    height: 100%;
+
+    border-radius: 999px;
+    background: #00ff88;
+    opacity: 0.5;
+
+    cursor: pointer;
+}
+
+.range::-webkit-slider-thumb:hover {
+    opacity: 1;
+    height: 24px;
+    box-shadow: 0 0 40px #00ff886d;
+    cursor: grab;
+}
+
+.range:active::-webkit-slider-thumb {
+    opacity: 1;
+    height: 24px;
+    box-shadow: 0 0 40px #00ff886d;
+    cursor: grabbing;
+}
+
+
+
+/*  FIREFOX */
+.range::-moz-range-thumb {
+    appearance: none;
+
+    width: clamp(50px, 20vw, 1000px);
+    height: 100%;
+
+    border-radius: 999px;
+    background: #00ff88;
+    opacity: 0.5;
+
+    cursor: pointer;
+}
+
+.range::-moz-range-thumb:hover {
+    opacity: 1;
+    height: 24px;
+    box-shadow: 0 0 40px #00ff886d;
+    cursor: grab;
+}
+
+.range:active::-moz-range-thumb {
+    opacity: 1;
+    height: 24px;
+    box-shadow: 0 0 40px #00ff886d;
+    cursor: grabbing;
+}
