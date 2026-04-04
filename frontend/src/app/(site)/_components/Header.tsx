@@ -8,11 +8,11 @@ export default function Header() {
 
     // Links para cada secao
     const links = [
-        { name: "Home", id: "home" },
-        { name: "Collections", id: "collections" },
-        { name: "Store", id: "store" },
-        { name: "About", id: "about" },
-        { name: "Contact", id: "contact" }
+        { name: "Inicio", id: "home" },
+        { name: "Coleções", id: "collections" },
+        { name: "Loja", id: "store" },
+        { name: "Sobre", id: "about" },
+        { name: "Contato", id: "contact" }
     ]
 
     const [active, setActive] = useState("home")
