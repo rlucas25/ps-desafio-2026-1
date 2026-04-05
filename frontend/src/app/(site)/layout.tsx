@@ -4,6 +4,8 @@ import SloganText from './_components/SloganText';
 import Button1, { Button2 } from './_components/Buttons';
 import CollectionsCarousel from './_components/Carousel';
 import ScrollSelector from './_components/ScrollSelector';
+import Products from './_components/Products';
+
 
 export default function SiteLayout() {
 
@@ -146,6 +148,7 @@ export default function SiteLayout() {
                             alignItems: 'center',
                             flexDirection: "column",
                             gap: "20px",
+                            background: '',
                         }}
                     >
                         <div
@@ -181,9 +184,8 @@ export default function SiteLayout() {
                         ></div>
 
 
-                        <Button2
-                            text='Ache o seu estilo'
-                        ></Button2>
+                        <Button2 text='Ache o seu estilo'></Button2>
+
                     </div>
 
                 </div>
@@ -229,7 +231,6 @@ export default function SiteLayout() {
                     justifyContent: 'center',
                     height: '40vw',
                     width: '100vw',
-                    background: 'black',
                     borderRadius: '100px',
                 }}>
                 <h1
@@ -262,17 +263,17 @@ export default function SiteLayout() {
             </div>
 
 
+
+
             <div
                 id='store'
                 style={{
                     display: 'flex',
-                    justifyContent: 'space-between',
+                    justifyContent: 'center',
                     alignItems: 'center',
-                    height: '100vh',
-                    width: '30%',
                     background: '',
                 }}>
-
+                <Products />
 
 
             </div>

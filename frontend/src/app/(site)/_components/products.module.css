@@ -1,0 +1,33 @@
+.products {}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 0px;
+}
+
+.title {
+    font-size: 100px;
+    color: white;
+}
+
+.filterBar {
+    width: 70vw;
+    height: 5vh;
+    background-color: hsl(120 3% 6%);
+    border-radius: 80px;
+}
+
+.productsList {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+
+    padding: 10vh;
+    gap: 2vw;
+    max-width: 80%;
+}

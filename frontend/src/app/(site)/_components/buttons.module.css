@@ -1,3 +1,8 @@
+.container1 {
+    height: 100%;
+    width: 100%;
+}
+
 .Icon {
     display: flex;
     justify-content: center;
@@ -34,6 +39,8 @@ a.btn-link {
     color: inherit;
 }
 
+
+
 .btn1 h3 {
     margin: 0;
     white-space: nowrap;
@@ -45,30 +52,49 @@ a.btn-link {
     transform: scale(1.05);
 }
 
+
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+}
+
 .btn2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    width: 25vw;
+
+    width: 100%;
+    max-width: 600px;
+
+    height: 70%;
 
     background: hsl(152 100% 21%);
     color: white;
 
-    padding: 30px 40px;
+    padding: 1em 4em;
     border-radius: 80px;
-    border: transparent;
+    border: none;
 
     cursor: pointer;
     transition: 0.3s;
 }
 
-.btn2 h3 {
-    margin: 0;
+.btn2 h1 {
+    text-decoration: none;
     white-space: nowrap;
 }
 
 .btn2:hover {
     background: hsla(151, 100%, 50%, 0.7);
     transform: scale(1.05);
+    box-shadow: 0 0 30px #00ff886d;
 }

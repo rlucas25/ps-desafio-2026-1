@@ -8,7 +8,7 @@ export default function Button1({
 
     return (
 
-        <div>
+        <div className={styles.container1}>
             <a
                 href={id}
                 style={{
@@ -38,16 +38,17 @@ export function Button2({
 
     return (
 
-        <div>
-            <a
-                href={id}
+        <div className={styles.container2}>
+            <a href={id}
                 style={{
                     textDecoration: 'none',
                     color: 'inherit',
                 }}>
 
                 <button className={styles.btn2}>
+
                     <h1>{text}</h1>
+
                 </button>
             </a>
         </div >

@@ -13,7 +13,7 @@ const IMAGES = [
 const TOTAL_TIME = 5500
 const PROGRESS_STEP_MS = 50
 
-export default function CollectionsCarousel() {
+export default function Carousel() {
   const [cards, setCards] = useState([
     { key: 0, image: IMAGES[0], slot: "top" },
     { key: 1, image: IMAGES[1], slot: "middle" },
