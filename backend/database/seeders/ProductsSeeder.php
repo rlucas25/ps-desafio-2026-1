@@ -6,7 +6,9 @@ use App\Models\Category;
 use App\Models\Products;
 use Illuminate\Database\Seeder;
 
-class productsSeeder extends Seeder
+
+
+class ProductsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -20,7 +22,7 @@ class productsSeeder extends Seeder
 
         $products = [
             [
-                'name' => 'Tênis World Destroyer',
+                'name' => 'Tênis WD1',
                 'brand' => 'Destroyer',
                 'price' => 399.90,
                 'year' => 2024,
@@ -29,7 +31,7 @@ class productsSeeder extends Seeder
                 'category_id' => $calcados->id,
             ],
             [
-                'name' => 'Camiseta World Destroyer',
+                'name' => 'Camiseta WD1',
                 'brand' => 'Destroyer',
                 'price' => 99.90,
                 'year' => 2024,
@@ -38,7 +40,7 @@ class productsSeeder extends Seeder
                 'category_id' => $camisas->id,
             ],
             [
-                'name' => 'Short World Destroyer',
+                'name' => 'Shot WD1',
                 'brand' => 'Destroyer',
                 'price' => 59.90,
                 'year' => 2024,
@@ -47,7 +49,79 @@ class productsSeeder extends Seeder
                 'category_id' => $shorts->id,
             ],
             [
-                'name' => 'Bola World Destroyer',
+                'name' => 'Bola WD1',
+                'brand' => 'Destroyer',
+                'price' => 59.90,
+                'year' => 2024,
+                'image' => null,
+                'amount' => 25,
+                'category_id' => $bolas->id,
+            ],
+            [
+                'name' => 'Tênis WC1',
+                'brand' => 'Creator',
+                'price' => 399.90,
+                'year' => 2026,
+                'image' => null,
+                'amount' => 25,
+                'category_id' => $calcados->id,
+            ],
+            [
+                'name' => 'Camiseta WD2',
+                'brand' => 'Destroyer',
+                'price' => 99.90,
+                'year' => 2026,
+                'image' => null,
+                'amount' => 25,
+                'category_id' => $camisas->id,
+            ],
+            [
+                'name' => 'Short WD2',
+                'brand' => 'Destroyer',
+                'price' => 59.90,
+                'year' => 2026,
+                'image' => null,
+                'amount' => 25,
+                'category_id' => $shorts->id,
+            ],
+            [
+                'name' => 'Bola WD2',
+                'brand' => 'Destroyer',
+                'price' => 59.90,
+                'year' => 2026,
+                'image' => null,
+                'amount' => 25,
+                'category_id' => $bolas->id,
+            ],
+            [
+                'name' => 'Tênis WD2',
+                'brand' => 'Destroyer',
+                'price' => 399.90,
+                'year' => 2024,
+                'image' => null,
+                'amount' => 25,
+                'category_id' => $calcados->id,
+            ],
+            [
+                'name' => 'Camiseta WD2',
+                'brand' => 'Destroyer',
+                'price' => 99.90,
+                'year' => 2024,
+                'image' => null,
+                'amount' => 25,
+                'category_id' => $camisas->id,
+            ],
+            [
+                'name' => 'Shot WD2',
+                'brand' => 'Destroyer',
+                'price' => 59.90,
+                'year' => 2024,
+                'image' => null,
+                'amount' => 25,
+                'category_id' => $shorts->id,
+            ],
+            [
+                'name' => 'Bola WD2',
                 'brand' => 'Destroyer',
                 'price' => 59.90,
                 'year' => 2024,
@@ -57,7 +131,7 @@ class productsSeeder extends Seeder
             ],
             
         ];
-
+        
         foreach ($products as $product) {
             Products::create($product);
         }
