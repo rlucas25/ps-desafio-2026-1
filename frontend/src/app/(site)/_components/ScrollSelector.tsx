@@ -4,6 +4,14 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import { useEffect } from "react";
 
+const IMAGES = [
+    "assets/img/people/woman.jpeg",
+    "assets/img/people/man.jpg",
+    "assets/img/people/girl.jpg",
+    "assets/img/people/boy.jpg",
+    "assets/img/people/teen.jpg",
+    "assets/img/people/all.png",
+]
 
 
 export default function ScrollSelector() {
@@ -58,7 +66,14 @@ export default function ScrollSelector() {
                             style={{ textDecoration: "none", color: "inherit" }}
                         >
                             <div className={styles.item}>
-                                <div className={styles.circle} />
+                                <div className={styles.circle}
+                                    style={{
+                                        backgroundImage: `url(${IMAGES[i]})`,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center'
+                                    }}
+                                />
+
                                 <span>{item}</span>
                             </div>
                         </Link>
@@ -86,6 +101,6 @@ export default function ScrollSelector() {
                 )}
 
             </div>
-        </div>
+        </div >
     );
 }

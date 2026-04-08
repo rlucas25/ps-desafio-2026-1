@@ -16,6 +16,20 @@
     }
 }
 
+.navRef {
+    position: relative;
+    display: flex;
+    width: clamp(250px, 30vw, 600px);
+    align-items: center;
+    height: 4dvh;
+    background-color: hsl(120, 15%, 6%, 0.7);
+    border-radius: 60px;
+    padding: 0 1.5vw;
+    overflow: hidden;
+}
+
+
+
 .selector {
     position: absolute;
     height: clamp(20px, 3vh, 60px);

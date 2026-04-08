@@ -9,7 +9,7 @@ import {
   DialogDescription,
 } from '@/components/dialog'
 import FormFieldsSportsItem from './form-fields-sports-item'
-import { createSportsItem } from '@/actions/sportsItem'
+import { createSportsItem } from '@/actions/products'
 import { filterFormData } from '@/services/filter-form-data'
 import { useEffect, useState } from 'react'
 import { useToast } from '@/components/use-toast'
@@ -20,7 +20,7 @@ interface DialogCreateSportsItemProps {
 }
 
 export function DialogCreateSportsItem({ children }: DialogCreateSportsItemProps) {
-  const [open, setOpen] = useState<boolean>()
+  const [open, setOpen] = useState(false)
   const [error, setError] = useState<ResponseErrorType | null>(null)
   const { toast } = useToast()
 

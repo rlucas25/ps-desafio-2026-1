@@ -1,6 +1,6 @@
 'use client'
 
-import { destroySportsItem } from '@/actions/sportsItem'
+import { destroySportsItem } from '@/actions/products'
 import { Button } from '@/components/button'
 import {
   Dialog,
@@ -20,7 +20,7 @@ interface DialogCreateSportsItemProps {
 }
 
 export function DialogSportsItemDelete({ id, children }: DialogCreateSportsItemProps) {
-  const [open, setOpen] = useState<boolean>()
+  const [open, setOpen] = useState(false)
   const { toast } = useToast()
 
   const submit = async () => {

@@ -1,0 +1,48 @@
+:root {
+    --background-gradient: linear-gradient(145deg, black, black, gray);
+
+    --foreground: 218 26% 48%;
+    --muted: 205 33% 87%;
+    --muted-foreground: 215 30% 60%;
+    --popover: 207 30% 94%;
+    --popover-foreground: 218 26% 48%;
+    --border: 210 7% 85%;
+    --input: 150 4% 89%;
+    --card: 210 38% 97%;
+    --card-foreground: 219 27% 47%;
+    --accent: 160 8% 81%;
+    --accent-foreground-700: 180 7% 34%;
+    --ring: 165 9% 60%;
+
+    --primary-min: 151 100% 50%;
+    --primary: 152 100% 21%;
+    --primary-max: 145 64% 11%;
+    --primary-foreground: 210 74% 94%;
+
+    --secondary-min: 0 0% 33%;
+    --secondary: 120 3% 6%;
+    --secondary-max: 0 0% 0%;
+    --secondary-foreground: 160 6% 90%;
+
+    --destructive-min: 7 67% 60%;
+    --destructive: 8 62% 42%;
+    --destructive-max: 8 52% 31%;
+    --destructive-foreground: 5 80% 94%;
+
+    --radius: 0.25rem;
+}
+
+* {
+    box-sizing: border-box;
+    border-color: hsl(var(--border));
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--background-gradient);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: hsl(var(--foreground));
+    font-family: Arial, sans-serif;
+}

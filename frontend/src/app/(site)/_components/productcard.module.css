@@ -7,6 +7,8 @@
 
     border-radius: 36px;
     background: #2f2f2f;
+    border-color: hsl(152 100% 21%);
+    border-width: 4px;
     cursor: pointer;
 
     transition: transform 0.3s ease;
@@ -14,6 +16,8 @@
 
 .productCard:hover {
     transform: scale(1.05);
+    top: -10px;
+    box-shadow: 0px 10px 0px hsl(152 100% 21%);
 }
 
 .productImage {
@@ -42,7 +46,7 @@
 
     background: linear-gradient(to top,
             rgba(0, 0, 0, 0.95),
-            rgba(40, 40, 40, 0.85),
+            rgba(20, 20, 20, 0.85),
             rgba(40, 40, 40, 0));
 
     transform: translateY(28px);
@@ -74,17 +78,17 @@
 
 .productName {
     margin: 0;
-    color: white;
+    color: #00ff88;
     font-size: 1rem;
     font-weight: 800;
 }
 
 .productAmount {
 
-    margin: 0;
     color: white;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    font-weight: 800;
 }
 
 .productPrice {
@@ -92,13 +96,6 @@
     color: white;
     font-size: 0.95rem;
     font-weight: 500;
-}
-
-.productDiscount {
-    color: #00ff88;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    font-weight: 800;
 }
 
 .buyButton {
@@ -131,4 +128,9 @@
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+}
+
+.buyButton:disabled {
+    background-color: gray;
+    cursor: not-allowed;
 }

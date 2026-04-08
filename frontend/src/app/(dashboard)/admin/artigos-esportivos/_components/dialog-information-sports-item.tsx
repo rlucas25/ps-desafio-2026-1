@@ -25,15 +25,18 @@ export function DialogInformationSportsItem({
   children,
 }: DialogInformationSportsItemProps) {
   const [sportsItem, setSportsItem] = useState<sportsItemType | null>(null)
-  const [open, setOpen] = useState<boolean>()
+  const [open, setOpen] = useState(false)
   const { toast } = useToast()
 
   useEffect(() => {
+    if (!open) return
+    setSportsItem(null)
+
     const requestData = async () => {
-      const { response } = null
+      const { response } = await api('GET', `/products/${id}`)
 
       if (response) {
-        setSportsItem(response)
+        setSportsItem(response as sportsItemType)
       } else {
         setSportsItem(null)
         toast({

@@ -91,18 +91,8 @@ export default function Header() {
         }}>
 
             <nav
+                className={styles.navRef}
                 ref={navRef}
-                style={{
-                    position: 'relative',
-                    display: 'flex',
-                    alignItems: "center",
-                    height: '4dvh',
-                    width: 'clamp(250px, 30vw, 600px)',
-                    backgroundColor: `hsl(var(--secondary) / ${alpha})`,
-                    borderRadius: '60px',
-                    padding: '0 1.5vw',
-                    overflow: 'hidden',
-                }}
             >
 
                 <div style={{
