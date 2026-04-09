@@ -14,10 +14,10 @@ export async function createSportsItem(form: FormData) {
 }
 
 export async function updateSportsItem(form: FormData) {
-    const res = await api('POST', `/products/${form.get('id')}`, { data: form })
+    const res = await api('PUT', `/products/${form.get('id')}`, { data: form })
 
     if (!res.error) {
-        revalidatePath('/admin/products')
+        revalidatePath('/admin/artigos-esportivos')
     }
 
     return JSON.stringify(res)

@@ -18,14 +18,14 @@
         --accent-foreground-700: 180 7% 34%;
         --ring: 165 7% 60%;
 
-        --primary-min: 204 70% 54%;
+        --primary-min: 151 100% 50%;
         --primary: 152 100% 21%;
-        --primary-max: 210 61% 24%;
-        --primary-foreground: 210 75% 94%;
+        --primary-max: 145 64% 11%;
+        --primary-foreground: 210 74% 94%;
 
-        --secondary-min: 180 6% 44%;
-        --secondary: 180 7% 34%;
-        --secondary-max: 180 6% 23%;
+        --secondary-min: 0 0% 33%;
+        --secondary: 120 3% 6%;
+        --secondary-max: 0 0% 0%;
         --secondary-foreground: 160 6% 90%;
 
         --destructive-min: 8 69% 60%;
