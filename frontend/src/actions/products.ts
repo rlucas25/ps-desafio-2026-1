@@ -17,7 +17,7 @@ export async function updateSportsItem(form: FormData) {
     const res = await api('PUT', `/products/${form.get('id')}`, { data: form })
 
     if (!res.error) {
-        revalidatePath('/admin/artigos-esportivos')
+        revalidatePath('/admin/products')
     }
 
     return JSON.stringify(res)
