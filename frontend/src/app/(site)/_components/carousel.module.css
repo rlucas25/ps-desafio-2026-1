@@ -124,3 +124,10 @@
     justify-content: center;
     padding-left: 5px;
 }
+
+@media (max-aspect-ratio: 32/27) {
+
+    .collections {
+        border-radius: 0px;
+    }
+}

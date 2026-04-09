@@ -15,7 +15,7 @@ export default function SloganText() {
             <h1
                 style={{
                     margin: 0,
-                    fontSize: "clamp(40px, 6vw, 120px)",
+                    fontSize: "clamp(60px, 6vw, 120px)",
                     fontWeight: 800,
                     lineHeight: 0.9,
                     background: "linear-gradient(0deg, #00ff88, #00ff88, #b7ffe1)",
