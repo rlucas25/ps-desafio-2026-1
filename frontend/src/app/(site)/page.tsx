@@ -107,17 +107,17 @@ export default async function Home() {
 
           <div className={styles.contactPhones}>
             <div className={styles.contactPhoneItem}>
-              <span className={styles.contactIcon}>⌕</span>
+              <span className={styles.contactIcon}>℡</span>
               <p>+12 (12) 1234-5678</p>
             </div>
 
             <div className={styles.contactPhoneItem}>
-              <span className={styles.contactIcon}>⌕</span>
+              <span className={styles.contactIcon}>℡</span>
               <p>+12 (12) 1234-5678</p>
             </div>
 
             <div className={styles.contactPhoneItem}>
-              <span className={styles.contactIcon}>⌕</span>
+              <span className={styles.contactIcon}>℡</span>
               <p>+12 (12) 1234-5678</p>
             </div>
           </div>
